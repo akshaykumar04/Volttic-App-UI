@@ -86,7 +86,7 @@ Lorem Ipsum is simply..."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:srcCompat="@drawable/CarStation" />
+        app:srcCompat="@drawable/car_station" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

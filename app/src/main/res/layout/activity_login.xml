@@ -70,11 +70,13 @@ your mobile number!"
         app:layout_constraintStart_toStartOf="@id/editText"
         app:layout_constraintTop_toBottomOf="@+id/editText" />
 
-    <Button
-        android:layout_width="250dp"
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="48dp"
-        android:background="@color/primary"
+        android:background="@drawable/bg_button"
         android:text="Next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textView5"
