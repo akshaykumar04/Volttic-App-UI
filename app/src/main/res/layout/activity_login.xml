@@ -51,6 +51,7 @@
         android:background="@drawable/bg_rectangle"
         android:drawableLeft="@drawable/flag_round"
         android:drawablePadding="12dp"
+        android:textColor="@color/textGray"
         android:hint="Enter Mobile Number"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
         app:layout_constraintStart_toStartOf="@+id/textView4"
