@@ -12,4 +12,5 @@
     <color name="app_bg">#FAFAEE</color>
     <color name="offWhite">#FAFAEE</color>
     <color name="offGray">#707070</color>
+    <color name="lightGray">#D6D6D6</color>
 </resources>
