@@ -14,9 +14,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clSelectedCharger"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/bg_rectangle_accent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -198,22 +198,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/bg_rectangle_white"
         android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/appCompatButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/clSelectedCharger">
+        app:layout_constraintTop_toBottomOf="@id/clSelectedCharger"
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:id="@+id/tvSelectVehicle"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:fontFamily="@font/poppins_semibold"
-            android:text="Currently Selected Vehicle"
+            android:gravity="center_horizontal"
+            android:text="Total Charging Amount"
             android:textColor="@color/primary"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -221,209 +224,136 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tvVehicle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:fontFamily="@font/poppins"
-            android:text="Select your EV....▼"
-            android:textColor="@color/textGray"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="@+id/tvSelectVehicle"
-            app:layout_constraintStart_toStartOf="@+id/tvSelectVehicle"
-            app:layout_constraintTop_toBottomOf="@id/tvSelectVehicle" />
-
-        <TextView
             android:id="@+id/tvHowMuch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:drawableStart="@drawable/ic_rs"
+            android:drawablePadding="10dp"
             android:fontFamily="@font/poppins_semibold"
-            android:text="How much would you like to charge"
+            android:foregroundGravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:text="1234"
             android:textColor="@color/primary"
-            android:textSize="16sp"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvVehicle" />
-
-        <View
-            android:id="@+id/view"
-            android:layout_width="1dp"
-            android:layout_height="50dp"
-            android:background="@color/offGray"
-            app:layout_constraintBottom_toBottomOf="@+id/editTextNumber"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/editTextNumber" />
+            app:layout_constraintTop_toBottomOf="@+id/tvSelectVehicle" />
 
         <TextView
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/poppins"
-            android:text="Enter Amount (INR)"
-            android:textColor="@color/textGray"
-            android:textSize="12sp"
-            app:layout_constraintStart_toStartOf="@+id/tvHowMuch"
-            app:layout_constraintTop_toBottomOf="@+id/tvHowMuch" />
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/poppins"
-            android:text="Enter Units (KWh)"
-            android:textColor="@color/textGray"
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="@+id/tvHowMuch"
-            app:layout_constraintTop_toBottomOf="@+id/tvHowMuch" />
-
-
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:text="KWh"
+            android:text="Payment Method"
             android:textColor="@color/primary"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/editTextNumber2"
-            app:layout_constraintEnd_toEndOf="@+id/textView8"
-            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
 
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/editTextNumber"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:drawableStart="@drawable/ic_rs"
-            android:drawablePadding="16dp"
-            android:fontFamily="@font/poppins"
-            android:hint="250"
-            android:inputType="number"
-            android:textColor="@color/textGray"
-            android:textColorHint="@color/lightGray"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/textView7"
-            app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/editTextNumber2"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:fontFamily="@font/poppins"
-            android:hint="4"
-            android:inputType="number"
-            android:paddingEnd="12dp"
-            android:textAlignment="viewEnd"
-            android:textColor="@color/textGray"
-            android:textColorHint="@color/lightGray"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/textView10"
-            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        <!--        <TextView-->
+        <!--            android:id="@+id/textView8"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:fontFamily="@font/poppins"-->
+        <!--            android:text="Wallet(₹ 475.00)"-->
+        <!--            android:textColor="@color/textGray"-->
+        <!--            android:textSize="12sp"-->
+        <!--            tools:layout_editor_absoluteX="34dp"-->
+        <!--            tools:layout_editor_absoluteY="123dp" />-->
+
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/textView39"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:fontFamily="@font/poppins"-->
+        <!--            android:text="Cash"-->
+        <!--            android:textColor="@color/textGray"-->
+        <!--            android:textSize="12sp"-->
+        <!--            tools:layout_editor_absoluteX="44dp"-->
+        <!--            tools:layout_editor_absoluteY="158dp" />-->
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView2"
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7"
+            tools:listitem="@layout/layout_item_payment_methods" />
 
         <View
             android:id="@+id/view2"
             android:layout_width="0dp"
             android:layout_height="1dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="13dp"
             android:background="@color/lightGray"
-            app:layout_constraintEnd_toEndOf="@+id/textView10"
-            app:layout_constraintStart_toStartOf="@+id/editTextNumber"
-            app:layout_constraintTop_toBottomOf="@+id/view" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvHowMuch" />
 
+        <!--        <View-->
+        <!--            android:id="@+id/view7"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="1dp"-->
+        <!--            android:background="@color/lightGray"-->
+        <!--            tools:layout_editor_absoluteX="10dp"-->
+        <!--            tools:layout_editor_absoluteY="156dp" />-->
 
-        <TextView
-            android:id="@+id/tvChargeAmountLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="14dp"
-            android:fontFamily="@font/poppins_medium"
-            android:text="Charging Amount"
-            android:textColor="@color/textGray"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="@+id/view2"
-            app:layout_constraintTop_toBottomOf="@+id/view2" />
-
-        <TextView
-            android:id="@+id/tvGSTLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:fontFamily="@font/poppins_medium"
-            android:text="GST (18%)"
-            android:textColor="@color/textGray"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="@+id/tvChargeAmountLabel"
-            app:layout_constraintTop_toBottomOf="@id/tvChargeAmountLabel" />
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:fontFamily="@font/poppins_medium"
-            android:text=":   ₹ 100.00"
-            android:textColor="@color/textGray"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="@+id/tvChargeAmountLabel"
-            app:layout_constraintStart_toEndOf="@+id/tvChargeAmountLabel"
-            app:layout_constraintTop_toTopOf="@+id/tvChargeAmountLabel" />
-
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:fontFamily="@font/poppins_medium"
-            android:text=":   ₹ 18.00"
-            android:textColor="@color/textGray"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="@+id/tvGSTLabel"
-            app:layout_constraintStart_toEndOf="@+id/tvChargeAmountLabel"
-            app:layout_constraintTop_toTopOf="@+id/tvGSTLabel" />
-
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:text="Total Amount"
-            android:textColor="@color/primary"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="@+id/tvGSTLabel"
-            app:layout_constraintTop_toBottomOf="@+id/tvGSTLabel" />
-
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_semibold"
-            android:text=":   ₹ 118.00"
-            android:textColor="@color/primary"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView13"
-            app:layout_constraintStart_toStartOf="@+id/textView12"
-            app:layout_constraintTop_toTopOf="@+id/textView13" />
+        <!--        <View-->
+        <!--            android:id="@+id/viewEnd"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="1dp"-->
+        <!--            android:background="@color/lightGray"-->
+        <!--            tools:layout_editor_absoluteX="3dp"-->
+        <!--            tools:layout_editor_absoluteY="189dp" />-->
 
         <View
-            android:id="@+id/viewEnd"
+            android:id="@+id/view"
             android:layout_width="0dp"
             android:layout_height="1dp"
-            android:layout_marginTop="14dp"
-            android:layout_marginBottom="7dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="13dp"
             android:background="@color/lightGray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.473"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerView2" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="I have connected the charger plug into my EV"
+            android:textColor="@color/textGray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="By Proceeding you agree to out Terms &amp; Conditions and Payment Policy"
+            android:textColor="@color/textGray"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/view2"
-            app:layout_constraintHorizontal_bias="0.6"
-            app:layout_constraintStart_toStartOf="@+id/view2"
-            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -525,7 +455,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/bg_button"
         android:text="Next"
         android:textColor="@color/white"

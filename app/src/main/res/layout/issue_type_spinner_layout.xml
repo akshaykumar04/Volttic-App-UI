@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/white">
+    android:background="@drawable/bg_rectangle_offwhite_curved">
 
 
     <TextView
@@ -14,22 +14,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="2dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="Wallet (₹ 475.00)"
+        android:text="Charger not starting"
         android:textColor="@color/textGray"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-
-    <CheckBox
-        android:id="@+id/cb_task_completed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:button="@drawable/ic_circular_checkbox_checked"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView9" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
