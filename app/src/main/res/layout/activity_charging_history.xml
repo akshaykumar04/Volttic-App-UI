@@ -36,7 +36,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:drawableLeft="@drawable/ic_icon_feather_clock"
-        android:drawablePadding="5"
+        android:drawablePadding="5dp"
         android:fontFamily="@font/poppins_medium"
         android:text="Select Time"
         android:textColor="@color/textGray"
