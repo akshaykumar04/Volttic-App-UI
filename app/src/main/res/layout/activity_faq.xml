@@ -7,6 +7,10 @@
     android:background="@color/app_bg"
     tools:context=".LoginActivity">
 
+    <include
+        android:id="@+id/includedToolbar"
+        layout="@layout/layout_toolbar"></include>
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
@@ -14,71 +18,38 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/poppins_semibold"
-        android:text="Get in Touch!"
+        android:text="Need Help?"
         android:textColor="@color/textGray"
         android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/includedToolbar" />
 
-    <TextView
-        android:id="@+id/tvPhone"
-        android:layout_width="wrap_content"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFaq"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="42dp"
-        android:drawableLeft="@drawable/ic_icon_feather_phone_call"
-        android:drawablePadding="18dp"
-        android:fontFamily="@font/poppins"
-        android:text="9988776655 (10am - 6pm)"
-        android:textColor="@color/textGray"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-    <TextView
-        android:id="@+id/tvEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:drawableLeft="@drawable/ic_icon_feather_mail"
-        android:drawablePadding="18dp"
-        android:fontFamily="@font/poppins"
-        android:text="contact@volttic.com"
-        android:textColor="@color/textGray"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/tvPhone"
-        app:layout_constraintTop_toBottomOf="@+id/tvPhone" />
-
-    <TextView
-        android:id="@+id/tvAddress"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:drawableLeft="@drawable/ic_location"
-        android:drawablePadding="18dp"
-        android:fontFamily="@font/poppins"
-        android:maxLines="3"
-        android:text="7, B Block Rd, Block A, Sector 64,\nNoida, Uttar Pradesh 201301"
-        android:textColor="@color/textGray"
-        android:textSize="18sp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/tvEmail"
-        app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView3"
+        tools:itemCount="2"
+        tools:listitem="@layout/item_faq" />
 
-    <TextView
-        android:id="@+id/tvUrl"
-        android:layout_width="wrap_content"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFaqExpanded"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:drawableLeft="@drawable/ic_icon_feather_globe"
-        android:drawablePadding="18dp"
-        android:fontFamily="@font/poppins"
-        android:text="https://volttic.com"
-        android:textColor="@color/textGray"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/tvAddress"
-        app:layout_constraintTop_toBottomOf="@+id/tvAddress" />
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recyclerViewFaq"
+        tools:itemCount="1"
+        tools:listitem="@layout/item_faq_expanded" />
+
 
     <View
         android:id="@+id/viewDivider"
@@ -88,7 +59,7 @@
         android:background="@color/offGray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvUrl" />
+        app:layout_constraintTop_toBottomOf="@id/recyclerViewFaqExpanded" />
 
     <TextView
         android:id="@+id/tvSocial"
@@ -97,7 +68,7 @@
         android:layout_marginTop="24dp"
         android:drawablePadding="18dp"
         android:fontFamily="@font/poppins_semibold"
-        android:text="We're Social, let's connect!"
+        android:text="Looking for something else?"
         android:textColor="@color/textGray"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -109,31 +80,22 @@
         android:id="@+id/imageView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView6"
         app:layout_constraintStart_toStartOf="@+id/tvSocial"
         app:layout_constraintTop_toBottomOf="@+id/tvSocial"
-        app:srcCompat="@drawable/ic_facebook" />
+        app:srcCompat="@drawable/ic_icon_feather_phone_call" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="84dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-        app:layout_constraintEnd_toStartOf="@+id/imageView7"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toTopOf="@+id/imageView5"
-        app:srcCompat="@drawable/ic_linkedin" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="54dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
         app:layout_constraintEnd_toEndOf="@+id/tvSocial"
-        app:layout_constraintTop_toTopOf="@+id/imageView6"
-        app:srcCompat="@drawable/ic_twitter" />
+        app:layout_constraintTop_toTopOf="@+id/imageView5"
+        app:srcCompat="@drawable/ic_icon_feather_mail" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
