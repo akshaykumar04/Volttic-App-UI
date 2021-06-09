@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Volttic App UI</string>
+    <string name="meter_reading">Meter Reading</string>
 </resources>
