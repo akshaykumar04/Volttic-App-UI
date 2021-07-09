@@ -13,6 +13,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </androidx.core.widget.NestedScrollView>
 
     <TextView
         android:id="@+id/textView1"
@@ -34,7 +44,6 @@
 
     <TextView
         android:id="@+id/textView2"
-
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -50,7 +59,45 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.373"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPincodeCounry" />
+
+
+    <TextView
+        android:id="@+id/pincode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Enter Country / Pin code"
+        android:textColor="@color/textGray"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.373"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <AutoCompleteTextView
+        android:id="@+id/etPincodeCounry"
+        style="@style/Widget.AppCompat.DropDownItem.Spinner"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/bg_rectangle_offwhite"
+        android:fontFamily="@font/poppins_semibold"
+        android:hint="Enter pincode or country...."
+        android:textColor="@color/black"
+        android:textColorHint="@color/offGray"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pincode" />
 
     <TextView
         android:id="@+id/textView3"
@@ -71,7 +118,6 @@
 
     <TextView
         android:id="@+id/textView4"
-
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -108,7 +154,6 @@
 
     <androidx.appcompat.widget.AppCompatSpinner
         android:id="@+id/spinnerSelectIssue"
-
         style="@style/Widget.AppCompat.DropDownItem.Spinner"
         android:layout_width="0dp"
         android:layout_height="50dp"
@@ -162,6 +207,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
+            android:id="@+id/clRadios"
             android:layout_height="match_parent">
 
             <RadioButton
