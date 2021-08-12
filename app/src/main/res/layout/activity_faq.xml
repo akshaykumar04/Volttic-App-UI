@@ -25,20 +25,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/includedToolbar" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewFaq"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView3"
-        tools:itemCount="2"
-        tools:listitem="@layout/item_faq" />
-
-    <androidx.recyclerview.widget.RecyclerView
+    <ExpandableListView
         android:id="@+id/recyclerViewFaqExpanded"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -46,9 +33,9 @@
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/recyclerViewFaq"
-        tools:itemCount="1"
-        tools:listitem="@layout/item_faq_expanded" />
+        app:layout_constraintTop_toBottomOf="@id/textView3"
+        tools:itemCount="2"
+        tools:listitem="@layout/item_faq" />
 
 
     <View
